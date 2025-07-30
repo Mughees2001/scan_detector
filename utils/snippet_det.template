@@ -1,0 +1,53 @@
+import dpkt
+import pcap
+import sys
+
+def analyze_packet(_timestamp, packet):
+    """
+    Main analysis loop for pcap.
+    """
+    eth = dpkt.ethernet.Ethernet(packet)
+    if isinstance(eth.data, dpkt.ip.IP):
+        ip = eth.data
+        if len(ip.data.data):
+            hex_array = ''.join('{:02x}'.format(x) for x in ip.data.data)
+            if "{{jinja_lcs_content}}" in hex_array:
+                print("Match Found: " + str(hex_array), flush=True)
+                return True
+        #if isinstance(ip.data, dpkt.tcp.TCP) and len(ip.data.data):
+        #    tcp = ip.data
+    print("No packet match", flush=True)
+    return False
+
+def start_listening(interface):
+    """
+    Starts the listening process.
+    """
+    try:
+        capture = pcap.pcap(name=interface, promisc=True, immediate=True, timeout_ms=5)
+    except OSError as exception:
+        print('[-] Issue: {0}'.format(exception))
+        sys.exit(-1)
+    try:
+
+        for ts, pkt in capture:
+            analyze_packet(ts, pkt)
+    except KeyboardInterrupt:
+        # quit
+        sys.exit()
+
+def main():
+    """
+    Main program loop.
+    """
+    print("len of argv: " + str(len(sys.argv)))
+    if len(sys.argv) != 2:
+        print("Usage: det_rul_sniffer.py <interface>")
+        exit(-1)
+    interface = sys.argv[1]
+
+    if len(sys.argv):
+        start_listening(interface)
+
+if __name__ == "__main__":
+    main()

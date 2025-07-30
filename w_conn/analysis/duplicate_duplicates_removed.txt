@@ -1,0 +1,9 @@
+-wfuzz/tls/443; wpscan/tls/443
+--|16 03 01 01|w|01 00 01|s|03 03|
+--however, wfuzz also has dns that can be used in addition/replacement of
+-spiderfoot/tls/443 (dns); whatweb/tls/443 (3); wapiti/tls/443; wafw00f/tls/443; nikto/tls/443 (3); dirb/tls/443; davtest/tls/443 (3); cutycapt/tls/443; commix/tls/443 (3)
+--|16 03 01 02 00 01 00 01 fc 03 03|
+--however, spiderfoot has dns too; whatweb has 2 additional matches that can be used instead
+-ffuf/http/80 (2); wpscan/http/80 (2); wafw00f/http/80 (2); skipfish/http/80 (2); nikto/http/80 (2); cutycapt/http/80 (2); commix/http/80 (2); 
+--GET / HTTP/1.1|0d 0a|Host: 
+--all have more matches, which are actually more accurate (e.g., ffuf has the keyword fuzz faster)

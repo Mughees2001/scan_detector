@@ -1,0 +1,48 @@
+{
+	"global": {
+	    "collection-name" : "wfuzz",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "timeout 60 wfuzz",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/10.0.0.0/nc_int_ext.template",
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/001_int_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/001_int_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-w /home/kali/git/scan_detector/tool_specific_artifacts/dirbuster/directory-list-2.3-small.txt http://10.0.0.5/FUZZ"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_int_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/002_int_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/002_int_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-w /home/kali/git/scan_detector/tool_specific_artifacts/dirbuster/directory-list-2.3-small.txt https://10.0.0.5/FUZZ"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+				{
+			"config-name" : "003_ext_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/003_ext_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/003_ext_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-w /home/kali/git/scan_detector/tool_specific_artifacts/dirbuster/directory-list-2.3-small.txt http://10.0.1.5/FUZZ"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_ext_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/004_ext_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/wfuzz/004_ext_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-w /home/kali/git/scan_detector/tool_specific_artifacts/dirbuster/directory-list-2.3-small.txt https://10.0.1.5/FUZZ"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

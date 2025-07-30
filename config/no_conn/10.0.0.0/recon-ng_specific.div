@@ -1,0 +1,48 @@
+{
+	"global": {
+	    "collection-name" : "recon-ng",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "timeout 15 recon-ng",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/10.0.0.0/none_int_ext.template",
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/001_int_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/001_int_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-r /home/kali/git/scan_detector/tool_specific_artifacts/recon-ng/hackertarget_10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_int_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/002_int_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/002_int_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-r /home/kali/git/scan_detector/tool_specific_artifacts/recon-ng/hackertarget_10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "003_ext_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/003_ext_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/003_ext_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-r /home/kali/git/scan_detector/tool_specific_artifacts/recon-ng/hackertarget_10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_ext_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/004_ext_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/recon-ng/004_ext_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-r /home/kali/git/scan_detector/tool_specific_artifacts/recon-ng/hackertarget_10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

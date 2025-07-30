@@ -1,0 +1,3 @@
+modules load recon/domains-hosts/hackertarget
+options set SOURCE 129.129.129.10
+run

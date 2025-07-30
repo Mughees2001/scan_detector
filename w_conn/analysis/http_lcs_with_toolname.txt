@@ -1,0 +1,32 @@
+-wfuzz/http/80:
+--User-Agent: Wfuzz/3.1.0
+-ffuf/http/80:
+--User-Agent: Fuzz Faster U Fool v1.3.1 Kali Exclusive <3|0d 0a|Accept-Encoding: gzip|0d 0a 0d 0a|
+-wpscan/http/80:
+--.10|0d 0a|Accept: */*|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|User-Agent: WPScan v3.8.20 (https://wpscan.com/wordpress-security-scanner)|0d 0a|Referer: http://1
+-whatweb/http/80:
+--GET / HTTP/1.1|0d 0a|User-Agent: WhatWeb/0.5.5|0d 0a|Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3|0d 0a|Accept: */*|0d 0a|Connection: close|0d 0a|Host: 1
+-wafw00f/http/80:
+--doesn't but it does contain a unique User Agent string
+--.10|0d 0a|User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3770.100 Safari/537.36|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3|0d 0a|Connection: keep-alive|0d 0a|Accept-Language: en-US,en;q=0.9|0d 0a|DNT: 1|0d 0a|Upgrade-Insecure-Requests: 1|0d 0a 0d 0a|
+-sqlmap/http/80:
+--GET / HTTP/1.1|0d 0a|Cache-Control: no-cache|0d 0a|User-Agent: sqlmap/1.6#stable (https://sqlmap.org)|0d 0a|Host: 1
+-skipfish/http/80:
+--.10|0d 0a|Accept-Encoding: gzip|0d 0a|Connection: keep-alive|0d 0a|User-Agent: Mozilla/5.0 SF/2.10b|0d 0a|Range: bytes=0-399999|0d 0a|Referer: http://1
+-nikto/http/80:
+--.10|0d 0a|User-Agent: Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)|0d 0a|Connection: Keep-Alive|0d 0a 0d 0a|
+-dirb/http/80:
+--doesn't but it contain unique User Agent String
+--GET /randomfile1 HTTP/1.1|0d 0a|Host: 1
+--.10|0d 0a|User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0d 0a|Accept: */*|0d 0a 0d 0a|
+-dirbuster/http/80:
+--HEAD / HTTP/1.1|0d 0a|User-Agent: DirBuster-1.0-RC1 (http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)|0d 0a|Host: 1
+-davtest/http/80:
+--PROPFIND / HTTP/1.1|0d 0a|TE: deflate,gzip;q=0.3|0d 0a|Connection: TE, close|0d 0a|Host: 1
+-cutycapt/http/80:
+--.10|0d 0a|User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/602.1 (KHTML, like Gecko) cutycapt Version/10.0 Safari/602.1|0d 0a|Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8|0d 0a|Connection: Keep-Alive|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Accept-Language: en-US,*|0d 0a 0d 0a|
+-commix/http/80:
+--.10|0d 0a|User-Agent: commix/v3.3-stable (https://commixproject.com)|0d 0a|Accept: */*|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Connection: close|0d 0a 0d 0a|
+-lbd/http/80:
+--HEAD / HTTP/1.1|0d 0a|host: 1
+--.10|0d 0a|Connection: close|0d 0a 0d 0a|

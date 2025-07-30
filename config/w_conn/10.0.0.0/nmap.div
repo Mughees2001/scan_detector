@@ -1,0 +1,100 @@
+{
+	"global": {
+	    "collection-name" : "nmap",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "nmap",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/10.0.0.0/single_int_ext.template", 
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_intense_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_intense_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_intense_scan/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_intense_scan/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-T4 -A -v"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_intense_scan_all_TCP_ports",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_intense_scan_all_TCP_ports/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_intense_scan_all_TCP_ports/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_intense_scan_all_TCP_ports/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-p 1-65535 -T4 -A -v"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "005_intense_scan_no_ping",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_intense_scan_no_ping/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_intense_scan_no_ping/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_intense_scan_no_ping/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-T4 -A -v -Pn"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "006_ping_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ping_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ping_scan/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ping_scan/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-sn"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "007_quick_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_quick_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_quick_scan/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_quick_scan/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-T4 -F"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "008_quick_scan_plus",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_quick_scan_plus/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_quick_scan_plus/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_quick_scan_plus/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-sV -T4 -O -F --version-light"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "009_quick_traceroute",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_quick_traceroute/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_quick_traceroute/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_quick_traceroute/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5 10.0.1.5", "-sn --traceroute"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

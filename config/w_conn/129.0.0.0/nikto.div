@@ -1,0 +1,34 @@
+{
+	"global": {
+	    "collection-name" : "nikto",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "nikto",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/129.0.0.0/single_int_ext.template", 
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/001_int_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/001_int_scan/nikto_output/",
+			"scan-tool-output-filename" : "scan.txt",
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/001_int_scan/traffic_output/",
+			"scan-tool-arguments" : ["-h 129.129.129.10,129.129.130.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_ssl_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/002_ssl_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/002_ssl_scan/nikto_output/",
+			"scan-tool-output-filename" : "scan.txt",
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/nikto/002_ssl_scan/traffic_output/",
+			"scan-tool-arguments" : ["-h 129.129.129.10,129.129.130.10 -ssl"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

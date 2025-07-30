@@ -1,0 +1,130 @@
+legion/snmp/161:
+|02 01 03|0|0f 02 02|Ji|02 03 00 ff e3 04 01 04 02 01 03 04 10|0|0e 04 00 02 01 00 02 01 00 04 00 04 00 04 00|0|12 04 00 04 00 a0 0c 02 02|7|f0 02 01 00 02 01 00|0|00|
+fierce/dns/53:
+|01 00 00 01 00 00 00 00 00 00 07|myquery|00 00 02 00 01|
+dnsrecon:
+|00|*
+|01 00 00 01 00 00 00 00 00 00 14|
+|03|com|00 00 01 00 01|
+wfuzz/tls/443:
+|16 03 01 01|w|01 00 01|s|03 03|
+wfuzz/dns/53:
+|01 00 00 01 00 00 00 00 00 00 02|n1|00 00 01 00 01|
+wfuzz/http/80:
+User-Agent: Wfuzz/3.1.0
+theHarvester/dns/53:
+|01 00 00 01 00 00 00 00 00 00 03|www|06|google|03|com|00 00 01 00 01|
+swaks/tcp/smtp/25:
+QUIT|0d 0a|
+sslyze/ssl/443:
+|16 03 01 00|
+sslscan/ssl/443:
+|80|4|01 00 02 00 1b 00 00 00 10 05 00 80 03 00 80 01 00 80 07 00 c0 08 00 80 06 00|@|04 00 80 02 00 80 00 00 00 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f|
+spiderfoot/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+spiderfoot/http/80:
+port was closed
+spiderfoot/dns/53:
+|01 00 00 01 00 00 00 00 00 00 02|10
+|07|in-addr|04|arpa|00 00 0c 00 01|
+onesixtyone/snmp/161:
+0)|02 01 00 04 06|public|a0 1c 02 04 ff ff ff ff 02 01 00 02 01 00|0|0e|0|0c 06 08|+|06 01 02 01 01 01 00 05 00|
+nbtscan/nbns/137:
+|00 10 00 01 00 00 00 00 00 00| CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|00 00|!|00 01|
+ffuf/tls/443:
+|16 03 01 00 ee 01 00 00 ea 03 03|
+ffuf/http/80:
+GET / HTTP/1.1|0d 0a|Host: 
+User-Agent: Fuzz Faster U Fool v1.3.1 Kali Exclusive <3|0d 0a|Accept-Encoding: gzip|0d 0a 0d 0a|
+enum4linux/nbns/137:
+|00 00 00 01 00 00 00 00 00 00| CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|00 00|!|00 01|
+wpscan/tls/443:
+|16 03 01 01|w|01 00 01|s|03 03|
+wpscan/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|Accept: */*|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|User-Agent: WPScan v3.8.20 (https://wpscan.com/wordpress-security-scanner)|0d 0a|Referer: http://1
+whatweb/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+|00 00 9c 13 02 13 03 13 01 c0 0a c0 14 c0 09 c0 13 c0|,|c0|0|00 a3 00 9f cc a9 cc a8 cc aa c0 af c0 ad c0 a3 c0 9f c0|]|c0|a|c0|W|c0|S|c0|+|c0|/|00 a2 00 9e c0 ae c0 ac c0 a2 c0 9e c0|\|c0|`|c0|V|c0|R|c0|$|c0|(|00|k|00|j|c0|s|c0|w|00 c4 00 c3 c0|#|c0|'|00|g|00|@|c0|r|c0|v|00 be 00 bd 00 9d c0 a1 c0 9d c0|Q|00 9c c0 a0 c0 9c c0|P|00|=|00 c0 00|<|00 ba 00|9|00|8|00 88 00 87 00|3|00|2|00 9a 00 99 00|E|00|D|00|5|00 84 00|/|00 96 00|A|00 ff 01 00 01|7|00 00 00|
+.10|00 0b 00 04 03 00 01 02 00 0a 00 0c 00 0a 00 1d 00 17 00 1e 00 19 00 18 00|#|00 00 00 16 00 00 00 17 00 00 00 0d 00|0|00|.|04 03 05 03 06 03 08 07 08 08 08 09 08 0a 08 0b 08 04 08 05 08 06 04 01 05 01 06 01 03 03 02 03 03 01 02 01 03 02 02 02 04 02 05 02 06 02 00|+|00 09 08 03 04 03 03 03 02 03 01 00|-|00 02 01 01 00|3|00|&|00|$|00 1d 00| 
+whatweb/http/80:
+GET / HTTP/1.1|0d 0a|User-Agent: WhatWeb/0.5.5|0d 0a|Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3|0d 0a|Accept: */*|0d 0a|Connection: close|0d 0a|Host: 1
+wapiti/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+wapiti/http/80:
+GET /zqxj
+;q=0.
+wafw00f/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+wafw00f/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3770.100 Safari/537.36|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3|0d 0a|Connection: keep-alive|0d 0a|Accept-Language: en-US,en;q=0.9|0d 0a|DNT: 1|0d 0a|Upgrade-Insecure-Requests: 1|0d 0a 0d 0a|
+sqlmap/tls/443:
+|16 03 01 00 bd 01 00 00 b9 03 03|
+sqlmap/http/80:
+GET / HTTP/1.1|0d 0a|Cache-Control: no-cache|0d 0a|User-Agent: sqlmap/1.6#stable (https://sqlmap.org)|0d 0a|Host: 1
+snmp-check/snmp/161:
+0)|02 01 00 04 06|public|a0 1c 02 04|
+|02 01 00 02 01 00|0|0e|0|0c 06 08|+|06 01 02 01 01 05 00 05 00|
+|16 03 01 01| |01 00 01 1c 03 03|
+skipfish/tls/443:
+|16 03 01 01| |01 00 01 1c 03 03|
+skipfish/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|Accept-Encoding: gzip|0d 0a|Connection: keep-alive|0d 0a|User-Agent: Mozilla/5.0 SF/2.10b|0d 0a|Range: bytes=0-399999|0d 0a|Referer: http://1
+recon-ng/dns/53:
+|01 00 00 01 00 00 00 00 00 00 03|raw|11|githubusercontent|03|com|00 00 01 00 01|
+nmap/dns/53:
+|00 00 10 00 00 00 00 00 00 00 00 00|
+nmap/isakmp/500:
+|00 11|"3DUfw|00 00 00 00 00 00 00 00 01 10 02 00 00 00 00 00 00 00 00 c0 00 00 00 a4 00 00 00 01 00 00 00 01 00 00 00 98 01 01 00 04 03 00 00|$|01 01 00 00 80 01 00 05 80 02 00 02 80 03 00 01 80 04 00 02 80 0b 00 01 00 0c 00 04 00 00 00 01 03 00 00|$|02 01 00 00 80 01 00 05 80 02 00 01 80 03 00 01 80 04 00 02 80 0b 00 01 00 0c 00 04 00 00 00 01 03 00 00|$|03 01 00 00 80 01 00 01 80 02 00 02 80 03 00 01 80 04 00 02 80 0b 00 01 00 0c 00 04 00 00 00 01 00 00 00|$|04 01 00 00 80 01 00 01 80 02 00 01 80 03 00 01 80 04 00 02 80 0b 00 01 00 0c 00 04 00 00 00 01|
+nmap/snmp/161:
+0:|02 01 03|0|0f 02 02|Ji|02 03 00 ff e3 04 01 04 02 01 03 04 10|0|0e 04 00 02 01 00 02 01 00 04 00 04 00 04 00|0|12 04 00 04 00 a0 0c 02 02|7|f0 02 01 00 02 01 00|0|00|
+nmap/tls/443:
+|16 03 00 00|S|01 00 00|O|03 00|?G|d7 f7 ba|,|ee ea b2|`~|f3 00 fd 82|{|b9 d5 96 c8|w|9b e6 c4 db|<=|db|o|ef 10|n|00 00|(|00 16 00 13 00 0a 00|f|00 05 00 04 00|e|00|d|00|c|00|b|00|a|00|`|00 15 00 12 00 09 00 14 00 11 00 08 00 06 00 03 01 00|
+nmap/http/80:
+GET / HTTP/1.0|0d 0a 0d 0a|
+nikto/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+|00|h|13 02 13 03 13 01 c0|,|cc a9 c0 af c0 ad c0|]|c0|+|c0 ae c0 ac c0|\|c0|$|c0|#|c0|0|cc a8 c0|a|c0|/|c0|`|c0|(|c0|'|00 9f cc aa c0 a3 c0 9f c0|S|00 9e c0 a2 c0 9e c0|R|00|k|00|g|00 9d c0 a1 c0 9d c0|Q|00 9c c0 a0 c0 9c c0|P|00|=|00|<|c0 0a c0 09 c0 14 c0 13 00|9|00|3|00 9a 00|5|00|/|00 ff 01 00 01|K|00 00 00|
+.10|00 0b 00 04 03 00 01 02 00 0a 00 0c 00 0a 00 1d 00 17 00 1e 00 19 00 18 00|#|00 00 00 16 00 00 00 17 00 00 00 0d 00|0|00|.|04 03 05 03 06 03 08 07 08 08 08 09 08 0a 08 0b 08 04 08 05 08 06 04 01 05 01 06 01 03 03 02 03 03 01 02 01 03 02 02 02 04 02 05 02 06 02 00|+|00 09 08 03 04 03 03 03 02 03 01 00|-|00 02 01 01 00|3|00|&|00|$|00 1d 00| 
+nikto/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|User-Agent: Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:Port Check)|0d 0a|Connection: Keep-Alive|0d 0a 0d 0a|
+nessus/udp/3702:
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing"><s:Header><a:Action s:mustUnderstand="1">http://schemas.xmlsoap.org/ws/2005/04/discovery/Probe</a:Action><a:MessageID>uuid:
+</a:MessageID><a:ReplyTo><a:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</a:Address></a:ReplyTo><a:To s:mustUnderstand="1">urn:schemas-xmlsoap-org:ws:2005:04:discovery</a:To></s:Header><s:Body><Probe xmlns="http://schemas.xmlsoap.org/ws/2005/04/discovery"><d:Types xmlns:d="http://schemas.xmlsoap.org/ws/2005/04/discovery" xmlns:dp0="http://www.onvif.org/ver10/network/wsdl">dp0:NetworkVideoTransmitter</d:Types></Probe></s:Body></s:Envelope>
+ike-scan/isakmp/500:
+|80 0b 00 01 00 0c 00 04 00 00|p|80|
+dnsenum/dns/53:
+|01 00 00 01 00 00 00 00 00 00 07|myquery|00 00 01 00 01|
+dirb/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+dirb/http/80:
+GET /randomfile1 HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0d 0a|Accept: */*|0d 0a 0d 0a|
+dirbuster/tls/443:
+|16 03 03 01|z|01 00 01|v|03 03|
+dirbuster/http/80:
+HEAD / HTTP/1.1|0d 0a|User-Agent: DirBuster-1.0-RC1 (http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)|0d 0a|Host: 1
+davtest/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+|c0|
+|00 15 00 d3 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|
+davtest/http/80:
+PROPFIND / HTTP/1.1|0d 0a|TE: deflate,gzip;q=0.3|0d 0a|Connection: TE, close|0d 0a|Host: 1
+cutycapt/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+cutycapt/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/602.1 (KHTML, like Gecko) cutycapt Version/10.0 Safari/602.1|0d 0a|Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8|0d 0a|Connection: Keep-Alive|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Accept-Language: en-US,*|0d 0a 0d 0a|
+commix/tls/443:
+|16 03 01 02 00 01 00 01 fc 03 03|
+|00|>|13 02 13 03 13 01 c0|,|c0|0|00 9f cc a9 cc a8 cc aa c0|+|c0|/|00 9e c0|$|c0|(|00|k|c0|#|c0|'|00|g|c0 0a c0 14 00|9|c0 09 c0 13 00|3|00 9d 00 9c 00|=|00|<|00|5|00|/|00 ff 01 00 01|u|00 0b 00 04 03 00 01 02 00 0a 00 0c 00 0a 00 1d 00 17 00 1e 00 19 00 18 00|#|00 00 00 16 00 00 00 17 00 00 00|1|00 00 00 0d 00|0|00|.|04 03 05 03 06 03 08 07 08 08 08 09 08 0a 08 0b 08 04 08 05 08 06 04 01 05 01 06 01 03 03 02 03 03 01 02 01 03 02 02 02 04 02 05 02 06 02 00|+|00 09 08 03 04 03 03 03 02 03 01 00|-|00 02 01 01 00|3|00|&|00|$|00 1d 00| 
+|00 15 00 d8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00|
+commix/http/80:
+GET / HTTP/1.1|0d 0a|Host: 1
+.10|0d 0a|User-Agent: commix/v3.3-stable (https://commixproject.com)|0d 0a|Accept: */*|0d 0a|Accept-Encoding: gzip, deflate|0d 0a|Connection: close|0d 0a 0d 0a|
+lbd/http/80:
+HEAD / HTTP/1.1|0d 0a|host: 1
+.10|0d 0a|Connection: close|0d 0a 0d 0a|

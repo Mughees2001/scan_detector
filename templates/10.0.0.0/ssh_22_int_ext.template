@@ -1,0 +1,198 @@
+node n1 {
+    type router
+    model PC
+    network-config {
+	hostname n1
+	!
+	interface eth0
+	 ip address 10.0.0.20/24
+	 ipv6 address 2001::20/64
+	 mac address 00:00:00:aa:00:5a
+	!
+    }
+    canvas c1
+    iconcoords {167.0 287.0}
+    labelcoords {167.0 319.0}
+    services {DefaultRoute UserDefined}
+    interface-peer {eth0 n2}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	files=('runme.sh', )
+	cmdup=('/bin/bash runme.sh', )
+	}
+    }
+    custom-config {
+	custom-config-id service:UserDefined:runme.sh
+	custom-command runme.sh
+	config {
+	#!/bin/bash
+	
+	touch {{jinjaTrafficDir}}att.pcap && dumpcap -w {{jinjaTrafficDir}}att.pcap &
+	sleep 5
+	touch {{jinjaTrafficDir}}inprog.scan
+	{{jinjaScanCmd}}
+	mv {{jinjaTrafficDir}}inprog.scan {{jinjaTrafficDir}}completed.scan
+	}
+    }
+}
+
+node n3 {
+    type router
+    model router
+    network-config {
+	hostname n3
+	!
+	interface eth1
+	 ip address 10.0.1.1/24
+	 ipv6 address 2001:1::1/64
+	 mac address 00:00:00:aa:00:5c
+	!
+	interface eth0
+	 ip address 10.0.0.1/24
+	 ipv6 address 2001::1/64
+	 mac address 00:00:00:aa:00:5b
+	!
+    }
+    canvas c1
+    iconcoords {380.0 164.0}
+    labelcoords {380.0 196.0}
+    services {IPForward}
+    interface-peer {eth0 n2}
+    interface-peer {eth1 n4}
+}
+
+node n4 {
+    type router
+    model host
+    network-config {
+	hostname n4
+	!
+	interface eth0
+	 ip address 10.0.1.5/24
+	 ipv6 address 2001:1::10/64
+	 mac address 00:00:00:aa:00:5d
+	!
+    }
+    canvas c1
+    iconcoords {515.0 258.0}
+    labelcoords {515.0 290.0}
+    services {DefaultRoute SSH UserDefined}
+    interface-peer {eth0 n3}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	files=('v_ext.sh', )
+	}
+    }
+    custom-config {
+	custom-config-id service:UserDefined:v_ext.sh
+	custom-command v_ext.sh
+	config {
+	#!/bin/bash
+	
+	touch {{jinjaTrafficDir}}ext_vic.pcap && dumpcap -w {{jinjaTrafficDir}}ext_vic.pcap 
+	}
+    }
+}
+
+node n5 {
+    type router
+    model host
+    network-config {
+	hostname n5
+	!
+	interface eth0
+	 ip address 10.0.0.5/24
+	 ipv6 address 2001::10/64
+	 mac address 00:00:00:aa:00:5e
+	!
+    }
+    canvas c1
+    iconcoords {173.0 181.0}
+    labelcoords {173.0 213.0}
+    services {DefaultRoute SSH UserDefined}
+    interface-peer {eth0 n2}
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	files=('v_int.sh', )
+	cmdup=('/bin/bash v_int.sh', )
+	}
+    }
+    custom-config {
+	custom-config-id service:UserDefined:v_int.sh
+	custom-command v_int.sh
+	config {
+	#!/bin/bash
+	
+	touch {{jinjaTrafficDir}}int_vic.pcap && dumpcap -w {{jinjaTrafficDir}}int_vic.pcap
+	}
+    }
+}
+
+node n2 {
+    type lanswitch
+    network-config {
+	hostname n2
+	!
+    }
+    canvas c1
+    iconcoords {257.0 227.0}
+    labelcoords {257.0 251.0}
+    interface-peer {e0 n1}
+    interface-peer {e1 n3}
+    interface-peer {e2 n5}
+}
+
+link l1 {
+    nodes {n2 n1}
+}
+
+link l2 {
+    nodes {n2 n3}
+}
+
+link l3 {
+    nodes {n2 n5}
+}
+
+link l4 {
+    nodes {n3 n4}
+}
+
+canvas c1 {
+    name {Canvas1}
+}
+
+option global {
+    interface_names no
+    ip_addresses yes
+    ipv6_addresses yes
+    node_labels yes
+    link_labels yes
+    show_api yes
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+    mac_address_start 80
+}
+
+option session {
+    controlnet=
+    controlnet0=
+    controlnet1=
+    controlnet2=
+    controlnet3=
+    controlnet_updown_script=
+    enablerj45=1
+    enablesdt=0
+    ovs=0
+    preservedir=0
+    sdturl=tcp://127.0.0.1:50000/
+}
+

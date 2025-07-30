@@ -1,0 +1,20 @@
+TODO:
+change MAC on all nodes (random would be good)
+
+Fix run for: dnsenum (both), skipfish (both), ike-scan (129)
+
+Run with tools against open ports (specific versions)
+Run with additional tools (all with rules)
+Auto-generate suricata rules
+Multi-packet indicators (e.g., a DNS request and then scan - wpscan)
+
+Look for non-content-based sigs (may be hard)
+
+Truly parallel runs
+
+Paper:
+tools that scan usually need to fill in some details and usually they don't go to the trouble of reimplementing the entire protocol; or even close to that. They end up using canned values -- this is what we are targetting = the additional effort it would require to look like a real client device.
+--------------5/11-----------
+get runs: cutycapt (10) -- done
+
+

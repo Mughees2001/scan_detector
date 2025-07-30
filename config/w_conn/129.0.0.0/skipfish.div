@@ -1,0 +1,32 @@
+{
+	"global": {
+	    "collection-name" : "skipfish",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "skipfish",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/129.0.0.0/single_int_ext.template", 
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 0
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/001_int_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/001_int_scan/skipfish_output/",
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/001_int_scan/traffic_output/",
+			"scan-tool-arguments" : ["http://129.129.129.10 http://129.129.130.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_ssl_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/002_ssl_scan/scenarios/", 
+			"scan-tool-output-argument" : "-o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/002_ssl_scan/skipfish_output/",
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/skipfish/002_ssl_scan/traffic_output/",
+			"scan-tool-arguments" : ["https://129.129.129.10 https://129.129.130.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

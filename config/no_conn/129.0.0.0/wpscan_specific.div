@@ -1,0 +1,48 @@
+{
+	"global": {
+	    "collection-name" : "wpscan",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "runuser -l kali -c",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/129.0.0.0/none_int_ext.template",
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/001_int_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/001_int_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["'wpscan --url http://129.129.129.10 --no-banner --request-timeout 5 --no-update'"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_int_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/002_int_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/002_int_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["'wpscan --url https://129.129.129.10 --no-banner --request-timeout 5 --no-update'"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+				{
+			"config-name" : "003_ext_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/003_ext_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/003_ext_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["'wpscan --url http://129.129.130.10 --no-banner --request-timeout 5 --no-update'"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_ext_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/004_ext_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/wpscan/004_ext_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["'wpscan --url https://129.129.130.10 --no-banner --request-timeout 5 --no-update'"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

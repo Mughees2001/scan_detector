@@ -1,0 +1,48 @@
+{
+	"global": {
+	    "collection-name" : "commix",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "commix",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/129.0.0.0/nc_int_ext.template",
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/001_int_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/001_int_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-u http://129.129.129.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_int_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/002_int_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/002_int_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-u https://129.129.129.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+				{
+			"config-name" : "003_ext_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/003_ext_scan_80/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/003_ext_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["-u http://129.129.130.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_ext_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/004_ext_scan_443/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/commix/004_ext_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["-u https://129.129.130.10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

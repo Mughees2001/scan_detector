@@ -1,0 +1,28 @@
+{
+	"global": {
+	    "collection-name" : "atk6-thc6ping",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "atk6-thcping6 eth0",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/129.0.0.0/none_int_ext.template", 
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/atk6-thc6ping/001_int_scan/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/atk6-thc6ping/001_int_scan/traffic_output/",
+			"scan-tool-arguments" : ["2001::10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_ext_scan",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/129.0.0.0/atk6-thc6ping/002_ext_scan/scenarios/", 
+			"traffic-output-path" : "/home/kali/git/scan_detector/129.0.0.0/atk6-thc6ping/002_ext_scan/traffic_output/",
+			"scan-tool-arguments" : ["2001:1::10"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}

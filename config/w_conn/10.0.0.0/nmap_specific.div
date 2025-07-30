@@ -1,0 +1,132 @@
+{
+	"global": {
+	    "collection-name" : "nmap",
+		"core-gui-path" : "/usr/local/bin/core-gui-legacy",
+		"scan-tool-path" : "nmap -sV",
+		"scenario-template-path" : "/home/kali/git/scan_detector/templates/10.0.0.0/nc_int_ext.template", 
+		"max-parallel-runs" : 1,
+		"time-between-parallel-starts" : 5
+	},
+	"config": [
+		{
+			"config-name" : "001_int_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan_80/scenarios/", 
+			"scan-tool-output-argument" : "-p 80 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan_80/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/001_int_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "002_int_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_int_scan_443/scenarios/", 
+			"scan-tool-output-argument" : "-p 443 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_int_scan_443/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/002_int_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "003_int_scan_161",
+			"scan-port" : "161 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/003_int_scan_161/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 161 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/003_int_scan_161/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/003_int_scan_161/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "004_int_scan_500",
+			"scan-port" : "500 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_int_scan_500/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 500 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_int_scan_500/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/004_int_scan_500/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "005_int_scan_53",
+			"scan-port" : "53 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_int_scan_53/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 53 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_int_scan_53/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/005_int_scan_53/traffic_output/",
+			"scan-tool-arguments" : ["10.0.0.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "006_ext_scan_80",
+			"scan-port" : "80 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ext_scan_80/scenarios/", 
+			"scan-tool-output-argument" : "-p 80 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ext_scan_80/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/006_ext_scan_80/traffic_output/",
+			"scan-tool-arguments" : ["10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "007_ext_scan_443",
+			"scan-port" : "443 -k",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_ext_scan_443/scenarios/", 
+			"scan-tool-output-argument" : "-p 443 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_ext_scan_443/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/007_ext_scan_443/traffic_output/",
+			"scan-tool-arguments" : ["10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "008_ext_scan_161",
+			"scan-port" : "161 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_ext_scan_161/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 161 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_ext_scan_161/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/008_ext_scan_161/traffic_output/",
+			"scan-tool-arguments" : ["10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "009_ext_scan_500",
+			"scan-port" : "500 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_ext_scan_500/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 500 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_ext_scan_500/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/009_ext_scan_500/traffic_output/",
+			"scan-tool-arguments" : ["10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		},
+		{
+			"config-name" : "010_ext_scan_53",
+			"scan-port" : "53 -u",
+			"scenario-gen-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/010_ext_scan_53/scenarios/", 
+			"scan-tool-output-argument" : "-sU -p 53 -o",
+			"scan-tool-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/010_ext_scan_53/nmap_output/",
+			"scan-tool-output-filename" : "scan.out",
+			"traffic-output-path" : "/home/kali/git/scan_detector/10.0.0.0/nmap/010_ext_scan_53/traffic_output/",
+			"scan-tool-arguments" : ["10.0.1.5"],
+			"num-iterations" : 1,
+			"parallel-collection" : true
+		}
+]
+}
